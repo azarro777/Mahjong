@@ -1,0 +1,36 @@
+.card {
+  box-sizing: border-box;
+  width: 80px;
+  height: 104px;
+  border-radius: 8px;
+  background: #ffffff;
+  /* margin: 5px 5px; */
+  border: 0.5px solid #CDCDCD;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  border: 0.5px solid #CDCDCD;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #CDCDCD;
+}
+
+.card:active {
+  border: 0.5px solid #ED5517;
+  border-color: #ED5517;
+  transition: border-color 5s;
+}
+
+
+
+.card h1 {
+  visibility: hidden;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}

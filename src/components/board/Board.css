@@ -1,0 +1,11 @@
+.board {
+  position: absolute;
+  width: 745px;
+  height: 461px;
+  left: 348px;
+  top: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* margin: 0 -5px; */
+}

@@ -1,0 +1,19 @@
+.app {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.app__header {
+  margin-top: 2.8rem;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+}
