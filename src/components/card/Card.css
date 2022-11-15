@@ -3,9 +3,8 @@
   width: 80px;
   height: 104px;
   border-radius: 8px;
-  background: #ffffff;
-  /* margin: 5px 5px; */
-  border: 0.5px solid #CDCDCD;
+  background: var(--cardBackground-color);
+  border: 0.5px solid var(--cardBorder-color);
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -13,21 +12,12 @@
 }
 
 .card:hover {
-  border: 0.5px solid #CDCDCD;
+  border: 0.5px solid var(--cardBorder-color);
   cursor: pointer;
-  box-shadow: 2px 2px 2px #CDCDCD;
+  box-shadow: 2px 2px 2px var(--cardBorder-color);
 }
-
-.card:active {
-  border: 0.5px solid #ED5517;
-  border-color: #ED5517;
-  transition: border-color 5s;
-}
-
-
 
 .card h1 {
-  visibility: hidden;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
