@@ -46,13 +46,18 @@ export const Board: FC = (): JSX.Element => {
         dispatch(clearOpenedCards());
       }, 500);
     } else {
-      const firstCard: any = cards.find((card: ICard) => card.id === openedCards[0].id);
-      const secondCard: any = cards.find((card: ICard) => card.id === openedCards[1].id);
+      const firstCard: ICard | undefined = cards.find((card: ICard) => card.id === openedCards[0].id);
+      const secondCard: ICard | undefined = cards.find((card: ICard) => card.id === openedCards[1].id);
       setTimeout(() => {
-        dispatch(toggleCardSide(firstCard.id));
-        dispatch(playableCard(firstCard));
-        dispatch(toggleCardSide(secondCard.id));
-        dispatch(playableCard(secondCard));
+        if(firstCard !== undefined) {
+          dispatch(toggleCardSide(firstCard.id));
+          dispatch(playableCard(firstCard));
+        }
+        if(secondCard !== undefined) {
+          dispatch(toggleCardSide(secondCard.id));
+          dispatch(playableCard(secondCard));
+        }
+        
         dispatch(clearOpenedCards());
       }, 500);
     }
