@@ -1,15 +1,17 @@
 import React from "react";
+import { JsxAttribute } from "typescript";
 import {
   compareCardsColor,
   defaultCardColor,
   matchedCardsColor,
 } from "../../utils/cardBorderColors";
+import IBoardProps from "../../utils/interfaces/IBoardProps.interface";
 import "./Card.css";
 
-const Card = (props) => {
+const Card = (props: IBoardProps): JSX.Element => {
   const { cards, handleCallback } = props;
 
-  const card = cards.map((element) => (
+  const card: React.ReactElement[] = cards.map((element) => (
     <div
       key={element.id}
       onClick={() => handleCallback(element.id)}

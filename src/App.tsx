@@ -1,11 +1,12 @@
+import React from 'react';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { fetchData } from './actions/mahjong';
 import './App.css';
 import { Board } from './components/board/Board';
+import { useAppDispatch } from './hooks/hooks';
 
-function App() {
-  const dispatch = useDispatch();
+export const App = (): JSX.Element => {
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchData());
@@ -18,5 +19,3 @@ function App() {
     </div>
   )
 }
-
-export default App;
